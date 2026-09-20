@@ -147,7 +147,7 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
         </div>
 
         {/* Top Header Actions */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
           {/* Mobile search button */}
           <button
             type="button"
@@ -190,7 +190,7 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
             href="https://github.com/KankonNil007/Machine-Learning-Journey"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-elevated transition-colors"
+            className="hidden min-[400px]:flex p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-elevated transition-colors"
             title="View Source on GitHub"
           >
             <Github className="w-4 h-4" />

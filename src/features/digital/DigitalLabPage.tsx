@@ -96,21 +96,23 @@ export const DigitalLabPage: React.FC = () => {
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">Digital Logic & Sequential Circuits</h1>
           <p className="text-xs sm:text-sm text-text-muted mt-1">Test Boolean operators, gate primitives, flip-flops, and timing verification.</p>
         </div>
-        <div className="flex items-center gap-1.5 p-1 rounded-lg bg-surface-elevated border border-border w-full sm:w-auto max-w-full overflow-x-auto scrollbar-none shrink-0">
-          {tabs.map((tab) => (
-            <button
-              key={tab.key}
-              type="button"
-              onClick={() => setActiveTab(tab.key)}
-              className={`px-3 py-1.5 rounded-md text-xs font-mono font-medium transition-all shrink-0 ${
-                activeTab === tab.key
-                  ? 'bg-emerald-500 text-white shadow-sm'
-                  : 'text-text-muted hover:text-text-primary'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+        <div className="relative w-full sm:w-auto max-w-full">
+          <div className="flex items-center gap-1.5 p-1 rounded-lg bg-surface-elevated border border-border w-full sm:w-auto overflow-x-auto scrollbar-none snap-x">
+            {tabs.map((tab) => (
+              <button
+                key={tab.key}
+                type="button"
+                onClick={() => setActiveTab(tab.key)}
+                className={`px-3 py-1.5 rounded-md text-xs font-mono font-medium transition-all shrink-0 snap-center ${
+                  activeTab === tab.key
+                    ? 'bg-emerald-500 text-white shadow-sm'
+                    : 'text-text-muted hover:text-text-primary'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
